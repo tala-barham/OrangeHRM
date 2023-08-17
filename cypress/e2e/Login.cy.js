@@ -38,7 +38,7 @@ describe('Orangehrm Login Test', () => {
       ln.verifyRequiredErrorMessageExists();
     })
 
-    it.only('Login With Long Username ',()=>{
+    it('Login With Long Username ',()=>{
       cy.fixture('orangehrm.json').then((data) => {
         ln.setUserName(data.invalidUser3.username)
         ln.setPassword(data.invalidUser3.password)
