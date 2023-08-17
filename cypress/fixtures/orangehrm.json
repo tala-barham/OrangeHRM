@@ -1,0 +1,18 @@
+{
+  "validUser": {
+    "username": "Admin",
+    "password": "admin123"
+  },
+  "invalidUser":{
+    "username":"Tala",
+    "password":"admin123"
+  },
+  "invalidUser2":{
+    "username":"Admin",
+    "password":"tala123"
+  },
+  "invalidUser3":{
+    "username":"talaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "password":"admin123"
+  }
+}
