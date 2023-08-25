@@ -1,33 +1,35 @@
 class Login{
-    txtUserName='input[placeholder="Username"]';
-    txtPassword='input[placeholder="Password"]';
-    btnSubmit='button[type="submit"]';
-    msg='.oxd-topbar-header-breadcrumb > .oxd-text';
-    errmsg='.oxd-alert-content--error';
-    reqmsg='.oxd-input-field-error-message';
 
+    element={
+    txtUserName:()=>cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'),
+    txtPassword:()=>cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'),
+    btnSubmit:()=>cy.get('button[type="submit"]'),
+    msg:()=>cy.get('.oxd-topbar-header-breadcrumb > .oxd-text'),
+    errmsg:()=>cy.get('.oxd-alert-content--error'),
+    reqmsg:()=>cy.get('.oxd-input-field-error-message'),
+    }
     setUserName(username){
-    cy.get(this.txtUserName).type(username);
+    this.element.txtUserName().type(username);
     }
 
     setPassword(password){
-        cy.get(this.txtPassword).type(password);
+       this.element.txtPassword().type(password);
         }
 
     clickSubmit(){
-        cy.get(this.btnSubmit).click();
+        this.element.btnSubmit().click();
     }    
 
     verifyLogin(){
-        cy.get(this.msg).should('have.text','Dashboard');
+        this.element.msg().should('have.text','Dashboard');
     }
 
     verifyErrorMessage() {
-        cy.get(this.errmsg).should('be.visible');
+       this.element.errmsg().should('be.visible');
       }
 
       verifyRequiredErrorMessageExists() {
-        cy.get(this.reqmsg).should('be.visible');
+        this.element.reqmsg().should('be.visible');
       }   
 }
 export default Login;

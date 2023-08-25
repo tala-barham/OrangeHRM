@@ -14,5 +14,21 @@
   "invalidUser3":{
     "username":"talaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "password":"admin123"
+  },
+  "user":{
+    "employeename":"ana jerrez",
+    "userName":"talabarha",
+    "password":"tala123321",
+    "confirmPassword":"tala123321"
+  },
+  "invalidUser4":{
+    "employeename":"tala",
+    "userName":"zozobarhamm",
+    "password":"tala123321",
+    "confirmPassword":"tala123321"
+  },
+  "searchValidUser":{
+    "userName":"SaiTheAdmin",
+    "employeeName":"Kalki Tester"
   }
 }
